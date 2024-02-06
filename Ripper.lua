@@ -356,11 +356,12 @@ Spawner.runEntity = function(entityTable)
         local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
         local camara = workspace.CurrentCamera
         local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(Cf)
-	                camara.CFrame = camara.CFrame * Cf
+	        camara.CFrame = camara.CFrame * Cf
         end)
     
         camShake:Start()
         camShake:Shake(CameraShaker.Presets.Explosion)
+	camShake:Shake(CameraShaker.Presets.Explosion)
 
 	
         wait(8)
