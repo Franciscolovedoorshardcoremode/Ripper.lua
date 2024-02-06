@@ -358,9 +358,8 @@ Spawner.runEntity = function(entityTable)
     
         camShake:Start()
         camShake:Shake(CameraShaker.Presets.Explosion)
-        camShake:Shake(CameraShaker.Presets.Explosion)
-        camShake:Shake(CameraShaker.Presets.Explosion)
-    
+
+	
         wait(8)
         entityModel:Destroy()
         task.spawn(entityTable.Debug.OnEntityDespawned)
