@@ -350,9 +350,12 @@ Spawner.runEntity = function(entityTable)
         for _, v in next, entityConnections do
             v:Disconnect()
         end
+        entityModel.Ripe.Anchored = false
+	entityModel.Ripe.CanCollide = false
+	entityModel.Ripe["Door Murder"]:Play()
         local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
         local camara = workspace.CurrentCamera
-        local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+        local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(Cf)
 	                camara.CFrame = camara.CFrame * Cf
         end)
     
@@ -362,6 +365,7 @@ Spawner.runEntity = function(entityTable)
 	
         wait(8)
         entityModel:Destroy()
+	entityModel.Ripe["Door Murder2"]:Destroy()
         task.spawn(entityTable.Debug.OnEntityDespawned)
     end
 end
