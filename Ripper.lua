@@ -365,6 +365,7 @@ Spawner.runEntity = function(entityTable)
 	camShake:Shake(CameraShaker.Presets.Explosion)
 	camShake:Shake(CameraShaker.Presets.Explosion)
 	camShake:Shake(CameraShaker.Presets.Explosion)
+	camShake:Shake(CameraShaker.Presets.Explosion)
 
 	
         wait(8)
