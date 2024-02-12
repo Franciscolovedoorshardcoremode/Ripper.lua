@@ -352,6 +352,7 @@ Spawner.runEntity = function(entityTable)
         end
         entityModel.Ripe.Anchored = false
 	entityModel.Ripe.CanCollide = false
+	entityModel.Ripe["Door Murder"]:Play()
         local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
         local camara = workspace.CurrentCamera
         local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(Cf)
